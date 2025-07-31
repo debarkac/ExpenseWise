@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import DashboardLayout from '../../components/Layouts/DashboardLayout'
+import DashboardLayout from '../../components/layouts/DashboardLayout'
 import {useUserAuth} from '../../hooks/useUserAuth' 
 import { API_PATHS } from '../../utils/apiPaths';
 import ExpenseOverview from '../../components/Expense/ExpenseOverview';
