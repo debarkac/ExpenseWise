@@ -1,5 +1,5 @@
 import React from 'react'
-import DashboardLayout from '../../components/Layouts/DashboardLayout'
+import DashboardLayout from '../../components/layouts/DashboardLayout'
 import { useUserAuth } from '../../hooks/useUserAuth'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
