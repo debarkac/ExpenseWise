@@ -82,7 +82,7 @@ function Home() {
               <InfoCard
                 icon={<LuHandCoins/>}
                 label="Total Expense"
-                value={addThousandsSeparator(dashboardData?.totalExpense || 0)}
+                value={addThousandsSeparator(dashboardData?.totalExpenses || 0)}
                 color="bg-red-600"
               />
 
@@ -97,16 +97,16 @@ function Home() {
               <FinanceOverview
                 totalBalance = {dashboardData?.totalBalance || 0 }
                 totalIncome = {dashboardData?.totalIncome || 0 }
-                totalExpense = {dashboardData?.totalExpense || 0 }
+                totalExpense = {dashboardData?.totalExpenses || 0 }
               />
 
               <ExpenseTransactions
-                transactions={dashboardData?.last30DaysExpenses?.transaction || [] }
+                transactions={dashboardData?.last30DaysExpenses?.transactions || [] }
                 onSeeMore={()=>navigate("/expense")}
               />
 
               <Last30DaysExpenses
-                data={dashboardData?.last30DaysExpenses?.transaction || []}
+                data={dashboardData?.last30DaysExpenses?.transactions || []}
               />
 
               <RecentIncomeWithChart
@@ -115,7 +115,7 @@ function Home() {
               />
 
               <RecentIncome
-                transactions={dashboardData?.last60DaysIncome?.transaction || [] } 
+                transactions={dashboardData?.last60DaysIncome?.transactions || [] } 
                 onSeeMore={()=>navigate("/income")}
               />
 

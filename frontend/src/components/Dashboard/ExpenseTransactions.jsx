@@ -4,6 +4,7 @@ import TransactionInfoCard from '../Cards/TransactionInfoCard'
 import moment from 'moment'
 
 function ExpenseTransactions({transactions,onSeeMore}) {
+    console.log("Hello ", transactions)
   return (
     <div className='card'>
         <div className='flex items-center justify-between' >

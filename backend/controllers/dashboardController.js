@@ -50,6 +50,8 @@ exports.getDashboardData=async(req,res)=>{
                 type:"expense"
             })))
         ].sort((a,b)=>b.date-a.date)
+        
+        console.log("last30daysExpenseTransactions", last30daysExpenseTransactions);
 
         res.json({
             totalBalance:(totalIncome[0]?.total || 0)-(totalExpense[0]?.total||0),
