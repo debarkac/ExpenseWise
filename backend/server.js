@@ -13,14 +13,16 @@ const app = express();
 
 // CORS config
 const allowedOrigins = [process.env.CLIENT_URL || "https://expensewise-use.vercel.app"];
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true,
-}));
-app.options("*", cors({
-  origin: allowedOrigins,
-  credentials: true,
-}));
+const options = [
+  cors({
+    origin: allowedOrigins,
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+];
+
+app.use(options);
 
 app.use(express.json());
 
