@@ -25,7 +25,7 @@ function IncomeOverview({transactions,onAddIncome}) {
                 </p>
             </div>
 
-            <button className='add-btn ml-4 font-medium' onClick={onAddIncome} >
+            <button className='add-btn ml-4 font-medium cursor-pointer' onClick={onAddIncome} >
                 <LuPlus className='text-lg ' />
                 Add Income
             </button>

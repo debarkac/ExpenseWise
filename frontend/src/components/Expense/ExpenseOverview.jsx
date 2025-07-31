@@ -27,7 +27,7 @@ function ExpenseOverview({transactions,onAddExpense}) {
                 </p>
             </div>
 
-            <button className='add-btn ml-4 font-medium' onClick={onAddExpense} >
+            <button className='add-btn ml-4 font-medium cursor-pointer' onClick={onAddExpense} >
                 <LuPlus className='text-lg ' />
                 Add Expense
             </button>

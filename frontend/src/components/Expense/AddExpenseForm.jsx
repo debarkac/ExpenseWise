@@ -48,7 +48,7 @@ function AddExpenseForm({onAddExpense}) {
       <div className='flex justify-end mt-6'>
         <button
             type='button'
-            className='add-btn add-btn-fill'
+            className='add-btn add-btn-fill cursor-pointer'
             onClick={()=>onAddExpense(expense)}
         >
             Add Expense
