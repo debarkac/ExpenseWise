@@ -19,15 +19,25 @@ export const getInitials=(name)=>{
     return initials.toUpperCase();
 }
 
-export const addThousandsSeparator=(num)=>{
-    if(num==null || isNaN(num))
-        return "";
+export const addThousandsSeparator = (num) => {
+  if (num == null || isNaN(num)) return "";
 
-    const [integerPart,fractionalPart]=num.toString().split(".");
-    const formattedInteger=integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  const [integerPart, fractionalPart] = num.toString().split(".");
 
-    return fractionalPart?`${formattedInteger}.${fractionalPart}`:formattedInteger;
-}
+  let lastThree = integerPart.slice(-3);
+  let otherNumbers = integerPart.slice(0, -3);
+
+  if (otherNumbers !== "") {
+    lastThree = "," + lastThree;
+  }
+
+  const formattedInteger =
+    otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+
+  return fractionalPart
+    ? `${formattedInteger}.${fractionalPart}`
+    : formattedInteger;
+};
 
 export const prepareExpenseBarChartData = (data=[])=>{
     const charData = data.map((item)=>({
